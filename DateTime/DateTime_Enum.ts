@@ -1,7 +1,5 @@
-
-  
-enum Day{
-	  Sunday = 0,
+ enum WeekDay{
+	  Sunday = 1,
         Monday,
         Tuesday,
         Wednesday,
@@ -12,10 +10,10 @@ enum Day{
 
 function getDay(date : Date): number
 {
-    return date.getDay();
+    return WeekDay[date];
 }
 
-const anydate = new Date();
-const today = getWeekDay(anydate);
+var selectedDate = new Date();
+var today = getDay(selectedDate);
  
 console.log(WeekDay[today]);  
